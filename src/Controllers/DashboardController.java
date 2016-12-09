@@ -2,7 +2,6 @@ package Controllers;
 
 /**
  * Bryan Garcia
- * 12/8/16
  */
 
 import javafx.event.ActionEvent;

@@ -1,4 +1,7 @@
 package Controllers;
+/**
+ * @Author Bryan Garcia
+ */
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
