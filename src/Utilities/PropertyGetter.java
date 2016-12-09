@@ -5,6 +5,7 @@ import java.util.Properties;
 
 /**
  * Used to pull values from the config.properties file
+ *
  * @author Bryan Garcia
  */
 public class PropertyGetter {
@@ -14,6 +15,7 @@ public class PropertyGetter {
 
     /**
      * Goes to the property file and grabs the key's value
+     *
      * @param key The key you want to grab from config.properties
      * @return value of the key
      */

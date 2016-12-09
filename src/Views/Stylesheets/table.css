@@ -1,0 +1,20 @@
+.tableView .column-header-background {
+    -fx-background-color: #636363;
+}
+
+.tableView .column-header-background .label {
+    -fx-text-fill: black;
+}
+
+.tableView .table-cell{
+    -fx-text-fill: black;
+}
+
+.tableView .table-row-cell:odd{
+    -fx-background-color: beige;
+    -fx-text-fill: black;
+}
+
+.root {
+    -fx-background-color: beige;
+}

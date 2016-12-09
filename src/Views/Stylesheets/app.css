@@ -1,0 +1,22 @@
+.links {
+    -fx-text-fill: #FF4500;
+}
+
+.backgroundAP {
+    -fx-background-color: beige;
+}
+
+.button {
+    -fx-background-color: #636363;
+    -fx-text-fill: #FF4500;
+    -fx-background-radius: 6, 5;
+    -fx-background-insets: 0, 1;
+}
+
+.label {
+    -fx-text-fill: #636363;
+}
+
+.text-normal {
+    -fx-font-family: serif;
+}

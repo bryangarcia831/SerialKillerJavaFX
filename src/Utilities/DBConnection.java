@@ -1,17 +1,17 @@
 package Utilities;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
  * Used as a connection to my Amazon RDS database
+ *
  * @author Bryan Garcia
  */
 public class DBConnection {
 
-    public Connection getConnection(){
+    public Connection getConnection() {
         try {
             PropertyGetter pg = new PropertyGetter();
 
@@ -25,9 +25,9 @@ public class DBConnection {
 
             return DriverManager.getConnection(url, user, password);
 
-        } catch (ClassNotFoundException e){
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 

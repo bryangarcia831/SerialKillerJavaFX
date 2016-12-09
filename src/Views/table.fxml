@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <FlowPane>
+            <children>
+                <ScrollPane>
+                    <content>
+                        <TableView fx:id="tableView" prefHeight="337.0" prefWidth="583.0">
+                            <columns>
+                                <TableColumn prefWidth="75.0" text="C1" />
+                                <TableColumn prefWidth="75.0" text="C2" />
+                            </columns>
+                     <styleClass>
+                        <String fx:value="table-cell" />
+                        <String fx:value="table-row-cell" />
+                        <String fx:value="column-header-background" />
+                        <String fx:value="table-view" />
+                     </styleClass>
+                        </TableView>
+                    </content>
+                </ScrollPane>
+            </children>
+        </FlowPane>
+    </children>
+   <styleClass>
+      <String fx:value="backgroundAP" />
+      <String fx:value="text-normal" />
+   </styleClass>
+   <stylesheets>
+      <URL value="@Stylesheets/app.css" />
+      <URL value="@Stylesheets/table.css" />
+   </stylesheets>
+</AnchorPane>

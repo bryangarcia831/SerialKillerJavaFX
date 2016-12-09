@@ -1,28 +1,28 @@
 package Controllers;
 /**
  * Controller for Views/home.fxml
+ *
  * @author Bryan Garcia
  */
 
+import app.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import app.Main;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import javafx.scene.Parent;
 import java.util.ResourceBundle;
 
-public class HomeController implements Initializable{
-
-    @FXML private Label linkedIn;
+public class HomeController implements Initializable {
 
     private static Stage stage;
-
+    @FXML
+    private Label linkedIn;
     private Main main;
 
     /**
@@ -30,7 +30,7 @@ public class HomeController implements Initializable{
      * Uses HostServices.
      */
     @FXML
-    public void linkedInClick(){
+    public void linkedInClick() {
         main.getHostServices().showDocument("https://www.linkedin.com/in/bryangarcia831");
     }
 
@@ -38,7 +38,7 @@ public class HomeController implements Initializable{
      * Access the dashboard after pressing the button
      */
     @FXML
-    public void showDashboard(){
+    public void showDashboard() {
 
         stage = main.getStage();
 
