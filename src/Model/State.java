@@ -1,7 +1,8 @@
 package Model;
 
 /**
- * Bryan Garcia
+ * State Model
+ * @author Bryan Garcia
  */
 public class State {
 }

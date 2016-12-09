@@ -1,38 +1,51 @@
 package Utilities;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.Properties;
 
 /**
- * @Author Bryan Garcia
+ * Used to pull values from the config.properties file
+ * @author Bryan Garcia
  */
 public class PropertyGetter {
 
-    InputStream inputStream;
+    private InputStream fileStream;
+    private String propFileName;
 
-    public String getPropValues(String check) throws IOException {
+    /**
+     * Goes to the property file and grabs the key's value
+     * @param key The key you want to grab from config.properties
+     * @return value of the key
+     */
+    public String getPropValues(String key) {
+
         String value = "";
 
         try {
+
             Properties prop = new Properties();
-            String propFileName = "resources/config.properties";
+            propFileName = "resources/config/config.properties";
 
-            inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+            fileStream = new FileInputStream(new File(propFileName));
 
-            if (inputStream != null) {
-                prop.load(inputStream);
-            } else {
-                throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
-            }
-            value = prop.getProperty(check);
+            prop.load(fileStream);
 
+            value = prop.getProperty(key);
+
+        } catch (FileNotFoundException e) {
+            System.out.println("The file " + propFileName + " has not been found!");
         } catch (Exception e) {
             System.out.println("Exception: " + e);
         } finally {
-            inputStream.close();
+            if (!(fileStream == null)) {
+                try {
+                    fileStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         return value;
     }
+
 }

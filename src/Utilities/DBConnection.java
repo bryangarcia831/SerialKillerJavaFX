@@ -6,7 +6,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * @Author Bryan Garcia
+ * Used as a connection to my Amazon RDS database
+ * @author Bryan Garcia
  */
 public class DBConnection {
 
@@ -27,8 +28,6 @@ public class DBConnection {
         } catch (ClassNotFoundException e){
             e.printStackTrace();
         } catch (SQLException e){
-            e.printStackTrace();
-        } catch (IOException e){
             e.printStackTrace();
         }
 

@@ -1,7 +1,8 @@
 package Model;
 
 /**
- * Bryan Garcia
+ * Serial Killer Model
+ * @author Bryan Garcia
  */
 public class SerialKiller {
 }

@@ -1,7 +1,8 @@
 package Controllers;
 
 /**
- * Bryan Garcia
+ * Controller for Views.dashboard.fxml
+ * @author Bryan Garcia
  */
 
 import javafx.event.ActionEvent;
@@ -28,6 +29,10 @@ public class DashboardController implements Initializable{
         dbTable.setVisible(false);
     }
 
+    /**
+     * Will set the table to visible and start the process of grabbing data.
+     * @param e
+     */
     @FXML
     public void showStateTable(ActionEvent e){
         dbTable.setVisible(true);

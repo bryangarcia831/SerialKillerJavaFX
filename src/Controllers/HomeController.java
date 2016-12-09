@@ -1,6 +1,7 @@
 package Controllers;
 /**
- * @Author Bryan Garcia
+ * Controller for Views/home.fxml
+ * @author Bryan Garcia
  */
 
 import javafx.fxml.FXML;
@@ -24,11 +25,18 @@ public class HomeController implements Initializable{
 
     private Main main;
 
+    /**
+     * Opens my LinkedIn in user's preferred browser.
+     * Uses HostServices.
+     */
     @FXML
     public void linkedInClick(){
         main.getHostServices().showDocument("https://www.linkedin.com/in/bryangarcia831");
     }
 
+    /**
+     * Access the dashboard after pressing the button
+     */
     @FXML
     public void showDashboard(){
 
