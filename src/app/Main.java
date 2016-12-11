@@ -21,7 +21,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("../Views/home.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../views/home.fxml"));
         primaryStage.setTitle("Serial Killers");
         primaryStage.setScene(new Scene(root));
 

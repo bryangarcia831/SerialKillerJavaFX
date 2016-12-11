@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="backgroundAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomeController">
+<AnchorPane fx:id="backgroundAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
     <children>
         <GridPane layoutX="241.0" layoutY="239.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <columnConstraints>
@@ -55,8 +55,8 @@
         </GridPane>
     </children>
     <stylesheets>
-        <URL value="@Stylesheets/home.css" />
-        <URL value="@Stylesheets/app.css" />
+        <URL value="@stylesheets/home.css" />
+        <URL value="@stylesheets/app.css" />
     </stylesheets>
    <styleClass>
       <String fx:value="backgroundAP" />

@@ -1,4 +1,4 @@
-package Controllers;
+package controllers;
 /**
  * Controller for Views/home.fxml
  *
@@ -43,7 +43,7 @@ public class HomeController implements Initializable {
         stage = main.getStage();
 
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../Views/dashboard.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../views/dashboard.fxml"));
             stage.setTitle("Dashboard");
             stage.setScene(new Scene(root));
 

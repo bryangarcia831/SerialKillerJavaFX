@@ -1,4 +1,4 @@
-package Controllers;
+package controllers;
 
 /**
  * Controller for Views.dashboard.fxml
