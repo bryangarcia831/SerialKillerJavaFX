@@ -3,5 +3,5 @@ package model;
 /**
  * Bryan Garcia
  */
-public class Victim extends GenericModel{
+public class Victim extends GenericModel {
 }

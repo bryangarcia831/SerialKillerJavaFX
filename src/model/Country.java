@@ -5,5 +5,5 @@ package model;
  *
  * @author Bryan Garcia
  */
-public class Country extends GenericModel{
+public class Country extends GenericModel {
 }

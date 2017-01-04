@@ -5,5 +5,5 @@ package model;
  *
  * @author Bryan Garcia
  */
-public class SerialKiller extends GenericModel{
+public class SerialKiller extends GenericModel {
 }

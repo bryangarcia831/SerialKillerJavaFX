@@ -38,6 +38,7 @@ public class DashboardController implements Initializable {
 
     /**
      * Will set the table to visible and start the process of grabbing data.
+     *
      * @param e
      */
     @FXML

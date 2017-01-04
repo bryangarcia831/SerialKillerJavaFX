@@ -5,5 +5,5 @@ package model;
  *
  * @author Bryan Garcia
  */
-public class State extends GenericModel{
+public class State extends GenericModel {
 }

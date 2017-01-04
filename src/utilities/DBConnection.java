@@ -1,6 +1,6 @@
 package utilities;
 
-import com.mysql.jdbc.jdbc2.optional.*;
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -41,13 +41,13 @@ public class DBConnection {
     }
 
     public static Connection getConnection() {
-        if (connection.equals(null)){
+        if (connection == null) {
             setConnection();
         }
         return connection;
     }
 
-    public static void closeConnection(){
+    public static void closeConnection() {
         try {
             connection.close();
         } catch (SQLException e) {

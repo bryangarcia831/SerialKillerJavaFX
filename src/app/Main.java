@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utilities.DatabaseUtil;
 
 import java.io.IOException;
 import java.sql.Timestamp;
@@ -37,7 +38,16 @@ public class Main extends Application {
 
         stage = primaryStage;
 
+        testJBDC();
+
         primaryStage.show();
+    }
+
+
+    private void testJBDC() {
+        System.out.println("testJBDC");
+        DatabaseUtil db = new DatabaseUtil();
+        db.getSchema("Country");
     }
 
     /**
