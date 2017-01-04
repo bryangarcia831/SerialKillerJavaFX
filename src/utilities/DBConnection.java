@@ -17,7 +17,7 @@ public class DBConnection {
     /**
      * Set the MysqlDataSource connection.
      */
-    public void setConnection() {
+    public static void setConnection() {
         try {
             PropertyGetter pg = new PropertyGetter();
 
@@ -41,6 +41,9 @@ public class DBConnection {
     }
 
     public static Connection getConnection() {
+        if (connection.equals(null)){
+            setConnection();
+        }
         return connection;
     }
 
