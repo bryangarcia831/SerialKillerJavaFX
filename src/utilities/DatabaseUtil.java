@@ -1,6 +1,7 @@
 package utilities;
 
 import model.GenericModel;
+import model.TableModel;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -21,9 +22,7 @@ public class DatabaseUtil {
      */
     public HashMap<GenericModel, String> getSchema(String table) {
 
-        System.out.println("Inside get schema");
-
-        ArrayList<String> columnTitles = new ArrayList();
+        TableModel tableModel = new TableModel();
 
         Connection con = DBConnection.getConnection();
 
@@ -38,32 +37,19 @@ public class DatabaseUtil {
             ResultSetMetaData metaData = rs.getMetaData();
             int colCount = metaData.getColumnCount();
 
-//            //Getting column names
+            for (int i = 1; i < colCount+1; i++) {
+                tableModel.addColumn(metaData.getColumnName(i));
+            }
 
-//            System.out.println("col count = " + colCount);
-//            if (rs.next()) {
-//                for (int i = 1; i < colCount; i++) {
-//                    //TODO change to NOT temp
-//                    String temp = rs.getString(i);
-//                    System.out.println(temp);
-//                    columnTitles.add(temp);
-//                }
-//            }
+            ArrayList<String> cols = tableModel.getColumns();
 
-            metaData.getColumnCount();
-
-
-            while (rs.next()){
-                System.out.println(rs.getString("name") +  " \t \t \t pop: " + rs.getString("population"));
+            //TODO change this so column lables are always changing
+            while (rs.next()) {
+                tableModel.addRow(rs.getString("name") + " \t \t \t pop: " + rs.getString("population"));
             }
 
 
-//            while (rs.next()) {
-            //TODO change to generic columns
-//                String countryName = rs.getString("countryName");
-//                String stateName = rs.getString("stateName");
-//                System.out.println(countryName + "\t" + stateName + "\t");
-//            }
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -74,7 +60,9 @@ public class DatabaseUtil {
                     e.printStackTrace();
                 }
             }
+            DBConnection.closeConnection();
         }
+//        System.out.println(tableModel.toString());
         return null;
     }
 
