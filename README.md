@@ -8,6 +8,8 @@ Evolving a class project that was origincally built with PHP/HTML and transformi
 
 Uses Model-View-Controller software design pattern. Database schema was designed from scratch. 
 
+If you wish to run it, contact me and I can send the properties files.
+
 ***
 
  *	Developer: Bryan Garcia

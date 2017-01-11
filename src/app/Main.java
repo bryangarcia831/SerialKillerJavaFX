@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 import utilities.DatabaseUtil;
 
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        initLogger();
+//        initLogger();
 
         Parent root = FXMLLoader.load(getClass().getResource("../views/home.fxml"));
         primaryStage.setTitle("Serial Killers");
@@ -38,17 +39,9 @@ public class Main extends Application {
 
         stage = primaryStage;
 
-        testJBDC();
-
         primaryStage.show();
     }
 
-
-    private void testJBDC() {
-        System.out.println("testJBDC");
-        DatabaseUtil db = new DatabaseUtil();
-        db.getSchema("Country");
-    }
 
     /**
      * Initialize the logger file for error handling

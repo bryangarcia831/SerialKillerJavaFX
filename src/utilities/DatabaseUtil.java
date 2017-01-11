@@ -41,14 +41,12 @@ public class DatabaseUtil {
                 tableModel.addColumn(metaData.getColumnName(i));
             }
 
-            ArrayList<String> cols = tableModel.getColumns();
+            ArrayList<String> columns = tableModel.getColumns();
 
-            //TODO change this so column lables are always changing
+            //TODO change this so column labels are always changing
             while (rs.next()) {
                 tableModel.addRow(rs.getString("name") + " \t \t \t pop: " + rs.getString("population"));
             }
-
-
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -62,7 +60,7 @@ public class DatabaseUtil {
             }
             DBConnection.closeConnection();
         }
-//        System.out.println(tableModel.toString());
+        System.out.println(tableModel.toString());
         return null;
     }
 

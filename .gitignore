@@ -30,3 +30,7 @@ out/production/SerialKillers/Views/table.fxml
 resources/config/config.properties
 
 *.iml
+
+.idea/uiDesigner.xml
+
+.idea/libraries/junit_4_12.xml
