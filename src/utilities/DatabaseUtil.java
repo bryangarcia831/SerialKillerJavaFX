@@ -1,11 +1,9 @@
 package utilities;
 
-import model.GenericModel;
 import model.TableModel;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Utility for working with the mySQL database and DBConnection
@@ -18,13 +16,14 @@ public class DatabaseUtil {
      * Interacts with DBConnection to get ALL tuples from database table
      *
      * @param table The table you want to pull
-     * @return Hashmap with all tuples in the schema
+     * @return TableModel with all tuples in the schema and columns
      */
-    public HashMap<GenericModel, String> getSchema(String table) {
+    public TableModel getSchema(String table) {
+        DBConnection dbConnection = new DBConnection();
 
         TableModel tableModel = new TableModel();
 
-        Connection con = DBConnection.getConnection();
+        Connection con = dbConnection.getConnection();
 
         Statement stmt = null;
 
@@ -37,7 +36,7 @@ public class DatabaseUtil {
             ResultSetMetaData metaData = rs.getMetaData();
             int colCount = metaData.getColumnCount();
 
-            for (int i = 1; i < colCount+1; i++) {
+            for (int i = 1; i < colCount + 1; i++) {
                 tableModel.addColumn(metaData.getColumnName(i));
             }
 
@@ -58,10 +57,16 @@ public class DatabaseUtil {
                     e.printStackTrace();
                 }
             }
-            DBConnection.closeConnection();
+            if (con != null) {
+                try {
+                    dbConnection.closeConnection();
+                }catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
         }
-        System.out.println(tableModel.toString());
-        return null;
+        return tableModel;
     }
 
 }

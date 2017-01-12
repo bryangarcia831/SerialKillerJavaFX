@@ -12,12 +12,12 @@ import java.sql.SQLException;
  */
 public class DBConnection {
 
-    private static Connection connection;
+    private Connection connection;
 
     /**
      * Set the MysqlDataSource connection.
      */
-    public static void setConnection() {
+    public void setConnection() {
         try {
             PropertyGetter pg = new PropertyGetter();
 
@@ -40,14 +40,14 @@ public class DBConnection {
         }
     }
 
-    public static Connection getConnection() {
+    public Connection getConnection() {
         if (connection == null) {
             setConnection();
         }
         return connection;
     }
 
-    public static void closeConnection() {
+    public void closeConnection() {
         try {
             connection.close();
         } catch (SQLException e) {
